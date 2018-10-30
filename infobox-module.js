@@ -766,7 +766,7 @@ InfoBox.prototype.open = function (map, anchor) {
 
   var me = this;
 
-  if (anchor) {
+  if (anchor && anchor.getPosition) {
 
     this.position_ = anchor.getPosition();
     this.moveListener_ = google.maps.event.addListener(anchor, "position_changed", function () {
